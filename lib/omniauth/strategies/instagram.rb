@@ -10,7 +10,7 @@ module OmniAuth
       option :redirect_url
 
       def callback_url
-        full_host + script_name + callback_path
+        options.redirect_url || super
       end
 
       def request_phase
