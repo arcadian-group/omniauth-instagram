@@ -7,6 +7,8 @@ module OmniAuth
                                       authorize_url: 'https://api.instagram.com/oauth/authorize',
                                       token_url: 'https://api.instagram.com/oauth/access_token'
 
+      option :redirect_url
+
       def callback_url
         full_host + script_name + callback_path
       end
